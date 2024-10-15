@@ -1,3 +1,8 @@
-# INFO 340 Project
+# keepsake
 
-This repository contains code for an interactive information web app, created for the _Client-Side Web Development_ course at the UW iSchool.
+## Group Members
+
+1. Joseph V Tran
+2. Jake Ku
+3. Nicole Cho
+4. Daisy Lee
