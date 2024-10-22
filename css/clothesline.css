@@ -1,0 +1,118 @@
+/* css/clothesline.css */
+
+/* Basic reset */
+body, h1, p, img, nav, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f8ff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #282c34;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Main Content */
+main {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clothesline-container {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    border: 2px dashed #aaa;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Clothesline Lines */
+.clothesline-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #8b4513; /* Brown color for the clothesline */
+}
+
+.line1 {
+    top: 20px;
+    transform: rotate(-2deg);
+}
+
+.line2 {
+    top: 100px;
+    transform: rotate(2deg);
+}
+
+.line3 {
+    top: 180px;
+    transform: rotate(-1deg);
+}
+
+/* Photos */
+.photo-item {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 8px;
+}
+
+.caption {
+    font-size: 12px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+/* Hover effect */
+.photo-item:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
