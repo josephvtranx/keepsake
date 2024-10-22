@@ -1,0 +1,65 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh; 
+    margin: 0; 
+    background-color: #f0f0f0;
+}
+
+.journal-base {
+    display: block;
+    width: 95%; 
+    height: 175px;
+    margin-top: 70px; 
+    margin-bottom: 20px;
+    background-color: gray;
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    position: relative; 
+}
+
+.mood-base {
+    display: block; 
+    width: 95%; 
+    height: 315px; 
+    margin-top: 20px; 
+    background-color: gray;
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+.inner-box-journal {
+    width: 95.8%;
+    height: auto; 
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    font-size: 20px;
+    text-align: left;
+    padding: 10px;
+    position: absolute; 
+    top: 10px; 
+    bottom: 10px;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 115px; /* Add some space above the slider */
+}
+
+.slider {
+    width: 80%; /* Adjust the width as needed */
+    height: 25px; /* Make the slider bigger */
+}
+
+
