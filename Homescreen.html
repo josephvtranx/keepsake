@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Screen</title>
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+  
+  <header>
+    <div class="navbar">
+     
+      <div class="dropdown">
+        <span class="hamburger-menu" onclick="toggleMenu()">&#9776;</span> 
+        <div id="dropdown-content" class="dropdown-content">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="login-signup">
+        <a href="#login" class="btn">Login</a>
+        <a href="#signup" class="btn">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+ 
+  <div class="center-header">
+    <h1>Keepsake</h1>
+  </div>
+
+  <div class="center-header">
+    <h2>Keepsake</h2>
+  </div>
+
+  <script>
+   
+    function toggleMenu() {
+      var dropdown = document.getElementById("dropdown-content");
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
