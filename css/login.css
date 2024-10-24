@@ -1,4 +1,4 @@
-/* General page styling */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,7 +6,7 @@ body {
   background-color: #f4f4f4;
 }
 
-/* Navbar styling */
+
 .navbar {
   background-color: #333;
   overflow: hidden;
@@ -25,7 +25,7 @@ body {
   background-color: #575757;
 }
 
-/* Center header */
+
 .center-header {
   text-align: center;
   margin-top: 50px;
@@ -36,7 +36,7 @@ body {
   color: #333;
 }
 
-/* Login container */
+
 .login-container {
   width: 300px;
   margin: 0 auto;
