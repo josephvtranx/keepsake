@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Journal and Mood</title>
-    <link rel="stylesheet" href="css/journal.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <div class="navbar">
@@ -25,10 +25,14 @@
     </div>
     
     <div class="mood-base">
-        how are you feeling today?
+        <div class="mood-heading">how are you feeling today?</div>
         <div class="slider-container">
             <input type="range" min="1" max="10" value="1" class="slider" id="moodSlider">
         </div>
+        <a href="yourpage.html">
+            <button class="submit-button">Submit</button>
+        </a>
+        
     </div>
     
     <script>
@@ -39,4 +43,3 @@
     </script>
 </body>
 </html>
-

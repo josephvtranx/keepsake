@@ -74,16 +74,25 @@ h1 {
 }
 
 .mood-base {
-    display: block; 
-    width: 95%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start;
+    position: relative;
     height: 315px; 
-    margin-top: 20px; 
-    background-color: gray;
-    border-radius: 15px;
-    padding: 20px;
-    color: white;
+}
+
+.mood-heading {
+    margin-bottom: 20px;
     font-size: 25px;
     text-align: center;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    flex-grow: 1; 
 }
 
 .inner-box-journal {
@@ -95,26 +104,19 @@ h1 {
     font-size: 20px;
     text-align: left;
     padding: 10px;
-    resize: none; /* Disable resizing */
+    resize: none; 
     border: none;
     box-sizing: border-box;
 }
 
 .inner-box-journal:focus {
-    outline: none; /* Remove default textarea outline */
-}
-
-.slider-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 115px;
+    outline: none;
 }
 
 .slider {
     width: 80%;
     height: 25px;
-    background: linear-gradient(to right, rgb(252, 110, 110), rgb(251, 251, 120), rgb(121, 255, 121)); /* Static gradient */
+    background: linear-gradient(to right, rgb(252, 110, 110), rgb(251, 251, 120), rgb(121, 255, 121));
     border-radius: 12px;
     -webkit-appearance: none;
     appearance: none;
@@ -129,4 +131,22 @@ h1 {
     border-radius: 50%;
     cursor: pointer;
     border: 2px solid #000;
+}
+
+.submit-button {
+    position: absolute;
+    bottom: 20px; 
+    right: 20px; 
+    padding: 10px 15px; 
+    background-color: #4CAF50; 
+    color: white; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
 }
