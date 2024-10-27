@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-left: 6rem;
+    font-family: 'Arima';
+    font-size: 3rem;
+}
+
+h2 {
+    margin-left: 10rem;
+    margin-top: 3.4rem;
+    font-family: 'Arima';
+    color: rgb(126, 96, 60);
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Hamburger Button */
+.hamburger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger div {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Sidebar Menu */
+.menu {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Initially hidden offscreen */
+    width: 400px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: 0.4s;
+    z-index: 1000;
+    padding-top: 60px;
+}
+
+.menu a {
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: #575757;
+}
+
+/* Background Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: none;
+}
+
+/* Open Menu */
+.menu.active {
+    right: 0; /* Slide menu into view */
+}
+
+/* Open Overlay */
+.overlay.active {
+    display: block; /* Show overlay */
+}
+
+.picture-box {
+    border: 30px solid gray;
+    background-color: #fff;
+    border-radius: 25px;
+    width: 36vw;
+    height: 85vh;
+    margin-left: 4rem;
+    position: fixed;
+    left: 0;
+    cursor: pointer;
+    display: flex;
+}
+
+
+#text {
+    margin-left: 9rem;
+    margin-top: -0.3rem;
+    margin-bottom: -0.8rem;
+    background-color: transparent;
+    font-size: 28px;
+}
+
+#submit {
+    margin-left: 28.5rem;
+    font-size: 18px;
+}
+
+.image-container {
+    /* border: 30px solid gray; */
+    border-radius: 25px;
+    width: 46vw;
+    height: 85vh;
+    margin-right: 13rem;
+    position: fixed;
+    right: 0;
+    background-image: url('../paper-1763262_640.webp');
+    background-repeat: no-repeat;
+    background-size: 455x;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#drop-area {
+    border: 2px dashed rgb(131, 131, 131);
+    width: 32vw;
+    height: 77.2vh;
+    background-color: #e7e6e6;
+    transition: background-color 0.3s;
+    color: #575757;
+    font-family: 'Amira';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#drop-area label, #drop-area p {
+    margin-bottom: 4rem;
+}
+
+#drop-area:hover {
+    background-color: #e6f7ff;
+}
+
+.file-icon {
+    font-size: 100px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+#file-label {
+    margin-top: 4rem;
+    color: #575757;
+}
+
+
+/* Hamburger Animation */
+.hamburger.active div:nth-child(1) {
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0; /* Hide middle bar */
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(45deg) translate(-6px, -6px);
+}
