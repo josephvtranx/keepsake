@@ -3,16 +3,63 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 100vh; 
-    margin: 0; 
+    height: 100vh;
+    margin: 0;
     background-color: #f0f0f0;
 }
 
-.journal-base {
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    color: white;
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.hamburger-menu {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    top: 50px;
+    left: 10px;
+    width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
     display: block;
-    width: 95%; 
-    height: 175px;
-    margin-top: 70px; 
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+h1 {
+    margin-top: 80px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.journal-base,
+.mood-base {
+    width: 95%;
     margin-bottom: 20px;
     background-color: gray;
     border-radius: 15px;
@@ -20,7 +67,10 @@ body {
     color: white;
     font-size: 25px;
     text-align: center;
-    position: relative; 
+}
+
+.journal-base {
+    height: 175px;
 }
 
 .mood-base {
@@ -38,28 +88,45 @@ body {
 
 .inner-box-journal {
     width: 95.8%;
-    height: auto; 
+    height: 100%;
     background-color: white;
     border-radius: 10px;
     color: black;
     font-size: 20px;
     text-align: left;
     padding: 10px;
-    position: absolute; 
-    top: 10px; 
-    bottom: 10px;
+    resize: none; /* Disable resizing */
+    border: none;
+    box-sizing: border-box;
+}
+
+.inner-box-journal:focus {
+    outline: none; /* Remove default textarea outline */
 }
 
 .slider-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 115px; /* Add some space above the slider */
+    margin-top: 115px;
 }
 
 .slider {
-    width: 80%; /* Adjust the width as needed */
-    height: 25px; /* Make the slider bigger */
+    width: 80%;
+    height: 25px;
+    background: linear-gradient(to right, rgb(252, 110, 110), rgb(251, 251, 120), rgb(121, 255, 121)); /* Static gradient */
+    border-radius: 12px;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
 }
 
-
+.slider::-webkit-slider-thumb,
+.slider::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #000;
+}

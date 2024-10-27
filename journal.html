@@ -2,24 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="journal" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Journal and Mood</title>
-    <link rel="stylesheet" href="css/journal.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <h1>
-        XX/XX/XXXX keepsake
-    </h1>
-    <div class="journal-base">
-        <div class="inner-box-journal">
-            your text goes here...
+    <div class="navbar">
+        <div class="dropdown">
+            <span class="hamburger-menu" onclick="toggleMenu()">&#9776;</span>
+            <div id="dropdown-content" class="dropdown-content">
+                <a href="homescreen.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </div>
     </div>
+    
+    <h1>XX/XX/XXXX keepsake</h1>
+    
+    <div class="journal-base">
+        <textarea class="inner-box-journal" placeholder="your text goes here..."></textarea>
+    </div>
+    
     <div class="mood-base">
         how are you feeling today?
         <div class="slider-container">
             <input type="range" min="1" max="10" value="1" class="slider" id="moodSlider">
         </div>
     </div>
+    
+    <script>
+        function toggleMenu() {
+            var dropdown = document.getElementById("dropdown-content");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+    </script>
 </body>
 </html>
+
