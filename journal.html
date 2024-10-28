@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Journal and Mood</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/journal.css">
 </head>
 <body>
     <div class="navbar">
@@ -20,20 +20,19 @@
     
     <h1>XX/XX/XXXX keepsake</h1>
     
-    <div class="journal-base">
-        <textarea class="inner-box-journal" placeholder="your text goes here..."></textarea>
-    </div>
-    
-    <div class="mood-base">
-        <div class="mood-heading">how are you feeling today?</div>
-        <div class="slider-container">
-            <input type="range" min="1" max="10" value="1" class="slider" id="moodSlider">
+    <form action="Journal_page copy.html" method="POST">
+        <div class="journal-base">
+            <textarea class="inner-box-journal" name="journalEntry" placeholder="your text goes here..."></textarea>
         </div>
-        <a href="yourpage.html">
-            <button class="submit-button">Submit</button>
-        </a>
         
-    </div>
+        <div class="mood-base">
+            <div class="mood-heading">How are you feeling today?</div>
+            <div class="slider-container">
+                <input type="range" min="1" max="10" value="1" class="slider" id="moodSlider" name="moodRating">
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </div>
+    </form>
     
     <script>
         function toggleMenu() {
