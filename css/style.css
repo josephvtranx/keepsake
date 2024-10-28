@@ -567,55 +567,129 @@ body {
 }
 
 
-/* Hamburger Animation */
+
 .hamburger.active div:nth-child(1) {
   transform: rotate(-45deg) translate(-6px, 6px);
 }
 
 .hamburger.active div:nth-child(2) {
-  opacity: 0; /* Hide middle bar */
+  opacity: 0; 
 }
 
 .hamburger.active div:nth-child(3) {
   transform: rotate(45deg) translate(-6px, -6px);
 }
 
+/* Mobile view adjustments */
 @media (max-width: 598px) {
+  
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
 
-/* Center the navbar elements and reduce padding */
-.navbar {
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
+ 
+  .login-signup {
+    flex-direction: column;
+  }
+
+  
+  .center-header .home-heading {
+    font-size: 2rem;
+    left: 0;
+    position: fixed;
+  }
+
+  
+  .hamburger-menu {
+    font-size: 25px;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .dropdown-content {
+    width: 100%; 
+  }
+
+  
+  .picture-box, .image-container {
+    width: 90vw;
+    height: auto;
+    margin: 1rem 0;
+  }
+
+  #drop-area {
+    width: 90vw;
+    height: auto;
+  }
 }
 
-
-/* Stack the login and signup buttons */
-.login-signup {
-  flex-direction: column;
-}
-
-/* Resize the center header text */
-.center-header .home-heading {
-  font-size: 2rem;
-  left: 0;
-  position: fixed;
-  /* display: flex; */
-}
-
-
-}
-
-
+/* Tablet view adjustments */
 @media (max-width: 768px) {
+ 
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
 
+
+  .center-header h1 {
+    font-size: 3rem;
+  }
+
+  
+  .signup-container,
+  .login-container {
+    width: 80%;
+  }
+
+  /* Clothesline and photo adjustments */
+  .clothesline-container {
+    height: 200px;
+  }
+
+
+  .menu {
+    width: 80%; 
+  }
+
+  
+  .about-info {
+    writing-mode: horizontal-tb;
+    transform: none;
+    text-align: center;
+  }
+
+ 
+  .picture-box, .image-container {
+    width: 75vw;
+    height: auto;
+    margin: 2rem;
+  }
+
+  #drop-area {
+    width: 75vw;
+  }
 }
 
-@media (max-width: 992px) {
-
-
-}
-
+/* Large screen */
 @media (min-width: 1200px) {
+  
+  .center-header h1 {
+    font-size: 4rem;
+  }
 
+  /* Clothesline screen */
+  .clothesline-container {
+    height: 300px;
+  }
+
+  .photo {
+    width: 120px;
+    height: 120px;
+  }
 }
