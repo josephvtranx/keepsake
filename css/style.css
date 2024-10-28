@@ -91,6 +91,10 @@ body {
   animation: draw 5s steps(20) forwards;
 }
 
+.center-header .home-heading {
+  color: white;
+}
+
 .center-header h2 {
   font-size: 2rem;
   color: #000000;
@@ -570,4 +574,44 @@ body {
 
 .hamburger.active div:nth-child(3) {
   transform: rotate(45deg) translate(-6px, -6px);
+}
+
+@media (max-width: 598px) {
+
+/* Center the navbar elements and reduce padding */
+.navbar {
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+
+/* Stack the login and signup buttons */
+.login-signup {
+  flex-direction: column;
+}
+
+/* Resize the center header text */
+.center-header .home-heading {
+  font-size: 2rem;
+  left: 0;
+  position: fixed;
+  /* display: flex; */
+}
+
+
+}
+
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 992px) {
+
+
+}
+
+@media (min-width: 1200px) {
+
 }
