@@ -1,0 +1,405 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: white;
+}
+
+.hamburger-menu {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Dropdown Styles */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  top: 50px;
+  left: 0;
+  width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Button Styles */
+.login-signup {
+  display: flex;
+}
+
+.login-signup .btn {
+  color: white;
+  text-decoration: none;
+  background-color: #e7f0fa4a;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.login-signup .btn:hover {
+  background-color: #e7f0fa4a;
+}
+
+/* Center Header Styles */
+.center-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+}
+
+.center-header h1 {
+  font-size: 4rem;
+  color: #333;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #333;
+  animation: draw 5s steps(20) forwards;
+}
+
+.center-header h2 {
+  font-size: 2rem;
+  color: #000000;
+}
+
+/* Keyframe Animation */
+@keyframes draw {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Sign Up Styles */
+.signup-container {
+  width: 300px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.signup-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-container label {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.signup-container input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signup-container .btn {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.signup-container .btn:hover {
+  background-color: #575757;
+}
+
+.signup-container p {
+  text-align: center;
+}
+
+.signup-container a {
+  color: #333;
+  text-decoration: none;
+}
+
+.signup-container a:hover {
+  text-decoration: underline;
+}
+
+/* Journal Styles */
+.journal-base,
+.mood-base {
+  width: 95%;
+  margin-bottom: 20px;
+  background-color: gray;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+}
+
+.journal-base {
+  height: 175px;
+}
+
+.mood-base {
+  height: 315px;
+  margin-top: 20px;
+}
+
+.inner-box-journal {
+  width: 95.8%;
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  font-size: 20px;
+  text-align: left;
+  padding: 10px;
+  resize: none; /* Disable resizing */
+  border: none;
+  box-sizing: border-box;
+}
+
+.inner-box-journal:focus {
+  outline: none; /* Remove default textarea outline */
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 115px;
+}
+
+.slider {
+  width: 80%;
+  height: 25px;
+  background: linear-gradient(to right, rgb(252, 110, 110), rgb(251, 251, 120), rgb(121, 255, 121)); /* Static gradient */
+  border-radius: 12px;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb,
+.slider::-moz-range-thumb {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #000;
+}
+
+/* Login Styles */
+.login-container {
+  width: 300px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container label {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.login-container input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container .btn {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.login-container .btn:hover {
+  background-color: #575757;
+}
+
+.login-container p {
+  text-align: center;
+}
+
+.login-container a {
+  color: #333;
+  text-decoration: none;
+}
+
+.login-container a:hover {
+  text-decoration: underline;
+}
+
+/* About Styles */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  text-align: center;
+}
+
+.about-info {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  max-width: 100%;
+  margin: 20px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+/* Clothesline Styles */
+body {
+  background-color: #f0f8ff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.clothesline-container {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  border: 2px dashed #aaa;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Clothesline Lines */
+.clothesline-line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #8b4513; /* Brown color for the clothesline */
+}
+
+.line1 {
+  top: 20px;
+  transform: rotate(-2deg);
+}
+
+.line2 {
+  top: 100px;
+  transform: rotate(2deg);
+}
+
+.line3 {
+  top: 180px;
+  transform: rotate(-1deg);
+}
+
+/* Photos */
+.photo-item {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 8px;
+}
+
+.caption {
+  font-size: 12px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+/* Hover effect */
+.photo-item:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto;
+}
+
+/* Basic Styling for Proposal Page */
+h1,
+h2 {
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
