@@ -192,13 +192,13 @@ body {
   font-size: 20px;
   text-align: left;
   padding: 10px;
-  resize: none; /* Disable resizing */
+  resize: none; 
   border: none;
   box-sizing: border-box;
 }
 
 .inner-box-journal:focus {
-  outline: none; /* Remove default textarea outline */
+  outline: none;
 }
 
 .slider-container {
@@ -211,7 +211,7 @@ body {
 .slider {
   width: 80%;
   height: 25px;
-  background: linear-gradient(to right, rgb(252, 110, 110), rgb(251, 251, 120), rgb(121, 255, 121)); /* Static gradient */
+  background: linear-gradient(to right, rgb(252, 110, 110), rgb(251, 251, 120), rgb(121, 255, 121)); 
   border-radius: 12px;
   -webkit-appearance: none;
   appearance: none;
@@ -329,7 +329,7 @@ body {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #8b4513; /* Brown color for the clothesline */
+  background-color: #8b4513; 
 }
 
 .line1 {
@@ -408,7 +408,7 @@ main {
 .menu {
   position: fixed;
   top: 0;
-  right: -400px; /* Initially hidden offscreen */
+  right: -400px;
   width: 400px;
   height: 100%;
   background-color: #333;
@@ -473,12 +473,12 @@ main {
 
 /* Open Menu */
 .menu.active {
-  right: 0; /* Slide menu into view */
+  right: 0;
 }
 
 /* Open Overlay */
 .overlay.active {
-  display: block; /* Show overlay */
+  display: block;
 }
 
 
