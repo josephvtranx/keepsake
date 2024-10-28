@@ -388,6 +388,7 @@ footer {
   margin-top: auto;
 }
 
+
 /* Basic Styling for Proposal Page */
 h1,
 h2 {
@@ -404,16 +405,13 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-h1 {
+div h1 {
+  position: fixed;
   margin-left: 6rem;
   font-family: 'Arima';
   font-size: 3rem;
+  top: 0;
+  left: 0;
 }
 
 h2 {
@@ -423,7 +421,6 @@ h2 {
   color: rgb(126, 96, 60);
   font-size: 1.2rem;
 }
-
 
 body {
   font-family: Arial, sans-serif;
@@ -502,24 +499,11 @@ body {
   width: 36vw;
   height: 85vh;
   margin-left: 4rem;
+  margin-top: 3rem;
   position: fixed;
   left: 0;
   cursor: pointer;
   display: flex;
-}
-
-
-#text {
-  margin-left: 9rem;
-  margin-top: -0.3rem;
-  margin-bottom: -0.8rem;
-  background-color: transparent;
-  font-size: 28px;
-}
-
-#submit {
-  margin-left: 28.5rem;
-  font-size: 18px;
 }
 
 .image-container {
@@ -528,6 +512,7 @@ body {
   width: 46vw;
   height: 85vh;
   margin-right: 13rem;
+  margin-top: 3rem;
   position: fixed;
   right: 0;
   background-image: url('../paper-1763262_640.webp');
