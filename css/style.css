@@ -553,6 +553,16 @@ main {
   .login-container {
     width: 80%;
   }
+  .clothesline-container {
+    width: 700px; /* Adjust to fit larger screens */
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .photo {
+    width: 150px;
+    margin: 15px;
+  }
 }
 /* Clothesline*/
 /* Centered Header Title */
@@ -571,7 +581,7 @@ main {
 
 .page-title {
   position: absolute;
-  top: 80px;
+  top: 90px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 2.5rem;
@@ -589,13 +599,13 @@ main {
   padding: 0;
   font-family: Arial, sans-serif;
 }
+
 .photo-container {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-/* Individual photos */
 .photo {
   position: absolute;
   transform-origin: top center;
@@ -613,4 +623,19 @@ main {
 .photo img:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); 
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 30px;
+  }
+
+  .clothesline-container {
+    width: 900px;
+  }
+
+  .photo {
+    width: 200px;
+    margin: 20px;
+  }
 }
