@@ -22,7 +22,7 @@
     
     <form action="Journal_page.html" method="get">
         <div class="journal-base">
-            <textarea class="inner-box-journal" name="journalEntry" placeholder="your text goes here..."></textarea>
+            <textarea class="inner-box-journal" name="journalEntry" placeholder="Your text goes here..." required></textarea>
         </div>
         
         <div class="mood-base">
@@ -30,9 +30,11 @@
             <div class="slider-container">
                 <input type="range" min="1" max="10" value="1" class="slider" id="moodSlider" name="moodRating">
             </div>
-            <button class="submit" onclick="window.location.href='Journal_page.html';">Submit</button>
+            <!-- Remove the onclick from the button -->
+            <button type="submit" class="submit">Submit</button>
         </div>
     </form>
+    
     
     <script>
         function toggleMenu() {
