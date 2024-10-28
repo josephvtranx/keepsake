@@ -10,13 +10,17 @@
   
   <header>
     <div class="navbar">
-      <a href="homescreen.html" class="btn">Home</a> 
+      <div class="dropdown">
+        <span class="hamburger-menu" onclick="toggleMenu()">&#9776;</span> 
+        <div id="dropdown-content" class="dropdown-content">
+          <a href="index.html">Home</a>
+          <a href="journal.html">Today's Journal</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
     </div>
   </header>
-
-  <div class="center-header">
-    <h1>Login to Keepsake</h1>
-  </div>
 
   <div class="login-container">
     <form action="login_process.php" method="POST">
@@ -31,6 +35,16 @@
 
     <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
   </div>
+
+  <script>
+   
+    function toggleMenu() {
+      var dropdown = document.getElementById("dropdown-content");
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+
+
+  </script>
 
 </body>
 </html>

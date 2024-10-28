@@ -84,15 +84,11 @@ body {
 
 .center-header h1 {
   font-size: 4rem;
-  color: white;
+  color: #333;
   overflow: hidden;
   white-space: nowrap;
   border-right: 2px solid #333;
   animation: draw 5s steps(20) forwards;
-}
-
-.center-header .home-heading {
-  color: white;
 }
 
 .center-header h2 {
@@ -119,8 +115,6 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 30px;
-  position: fixed;
-  justify-content: center;
 }
 
 .signup-container form {
@@ -243,8 +237,6 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 30px;
-  justify-content: center;
-  position: fixed;
 }
 
 .login-container form {
@@ -396,7 +388,6 @@ footer {
   margin-top: auto;
 }
 
-
 /* Basic Styling for Proposal Page */
 h1,
 h2 {
@@ -411,45 +402,6 @@ main {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-div h1 {
-  position: fixed;
-  margin-left: 6rem;
-  font-family: 'Arima';
-  font-size: 3rem;
-  top: 0;
-  left: 0;
-}
-
-h2 {
-  margin-left: 10rem;
-  margin-top: 3.8rem;
-  font-family: 'Arima';
-  color: rgb(126, 96, 60);
-  font-size: 1.2rem;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  overflow-x: hidden;
-}
-
-/* Hamburger Button */
-.hamburger {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-.hamburger div {
-  width: 35px;
-  height: 5px;
-  background-color: #333;
-  margin: 6px 0;
-  transition: 0.4s;
 }
 
 /* Sidebar Menu */
@@ -479,6 +431,35 @@ body {
   background-color: #575757;
 }
 
+
+
+.page{
+  margin-left: 10rem;
+  margin-top: 3.8rem;
+  font-family: 'Arima';
+  color: rgb(126, 96, 60);
+  font-size: 1.2rem;
+}
+
+
+
+/* Hamburger Button */
+.hamburger {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger div {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
 /* Background Overlay */
 .overlay {
   position: fixed;
@@ -500,6 +481,7 @@ body {
   display: block; /* Show overlay */
 }
 
+
 .picture-box {
   border: 30px solid gray;
   background-color: #fff;
@@ -507,11 +489,24 @@ body {
   width: 36vw;
   height: 85vh;
   margin-left: 4rem;
-  margin-top: 3rem;
   position: fixed;
   left: 0;
   cursor: pointer;
   display: flex;
+}
+
+
+#text {
+  margin-left: 9rem;
+  margin-top: -0.3rem;
+  margin-bottom: -0.8rem;
+  background-color: transparent;
+  font-size: 28px;
+}
+
+#submit {
+  margin-left: 28.5rem;
+  font-size: 18px;
 }
 
 .image-container {
@@ -520,7 +515,6 @@ body {
   width: 46vw;
   height: 85vh;
   margin-right: 13rem;
-  margin-top: 3rem;
   position: fixed;
   right: 0;
   background-image: url('../paper-1763262_640.webp');
@@ -567,13 +561,13 @@ body {
 }
 
 
-
+/* Hamburger Animation */
 .hamburger.active div:nth-child(1) {
   transform: rotate(-45deg) translate(-6px, 6px);
 }
 
 .hamburger.active div:nth-child(2) {
-  opacity: 0; 
+  opacity: 0; /* Hide middle bar */
 }
 
 .hamburger.active div:nth-child(3) {
