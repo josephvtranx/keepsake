@@ -226,6 +226,11 @@ body {
     margin-top: 7rem;
 }
 
+.journal-entry {
+  margin-top: 3rem;
+  position: fixed;
+}
+
 .slider::-webkit-slider-thumb,
 .slider::-moz-range-thumb {
   width: 30px;
