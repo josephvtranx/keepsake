@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+<<<<<<< HEAD
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -23,6 +24,11 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
+=======
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+>>>>>>> refs/remotes/origin/main
     "vite": "^5.4.10"
   }
 }
