@@ -2,8 +2,10 @@
   font-size: 16px;
   font-family: 'Open Sans';
   --text-primary: #000000;
-  --bg-primary: #FAEBD7;
-  --bg-secondary: #DEB887;
+  --bg-primary: #ead8c2;
+  --bg-secondary: #ae866c;
+  --bg-third:#e3ddc5;
+  --bg-forth:#765555;
   --transition-speed: 600ms;
 }
 html, body {
@@ -13,17 +15,19 @@ html, body {
 body{
   color:#000000;
   background-color: white;
+
   margin: 0;
   padding: 0;
 }
 main {
   margin-left: 5rem;
   padding: 1rem;
-  background-color: white;
+  background-color: var(--bg-third);
   height: 100vh;
   display: flex;
   justify-content: center; /* Centers .picture-box and .image-container horizontally */
   align-items: center;
+
 }
 /* Timeline settings */
 .timeline {
