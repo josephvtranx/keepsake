@@ -527,13 +527,18 @@ main {
     color: #333;
     position: fixed;
     top: 0;
-    margin-top: 7rem;
+    margin-top: 5rem;
 }
 
 .journal-entry {
   margin-top: 4rem;
   position: fixed;
 }
+
+.journal-heading, .journal-entry {
+  text-align: center;
+}
+
 
 .slider::-webkit-slider-thumb,
 .slider::-moz-range-thumb {
