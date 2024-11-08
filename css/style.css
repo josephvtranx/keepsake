@@ -2,10 +2,10 @@
   font-size: 16px;
   font-family: 'Open Sans';
   --text-primary: #000000;
-  --bg-primary: #ead8c2;
-  --bg-secondary: #ae866c;
-  --bg-third:#e3ddc5;
-  --bg-forth:#765555;
+  --bg-primary: #d8c9ba;
+  --bg-secondary: #e5e1d8;
+  --bg-third:#e1dbce;
+  --bg-forth:#ccb9ac;
   --transition-speed: 600ms;
 }
 html, body {
@@ -470,7 +470,7 @@ main {
 .mood-base {
   width: 95%;
   margin-bottom: 20px;
-  background-color: gray;
+  background-color: #ccb9ac;
   border-radius: 15px;
   padding: 20px;
   color: white;
@@ -524,7 +524,7 @@ main {
 
 .journal-heading {
     font-family: 'Raleway', sans-serif;
-    color: #333;
+    color: #575757;
     position: fixed;
     top: 0;
     margin-top: 5rem;
