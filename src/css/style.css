@@ -864,3 +864,12 @@ h2 {
 }
 
 
+.date-bar {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Arial', sans-serif;
+}
