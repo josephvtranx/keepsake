@@ -1,6 +1,7 @@
 import React from "react";
-import Navbar from "../components/Navbar"; // Correct import for Navbar
-import Timeline from "../components/Timeline";
+import Navbar from "./components/Navbar"; // Correct import for Navbar
+import Timeline from "./components/Timeline";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const timelineData = [
   { time: "1934", imgSrc: "dummy-img/soundboard.JPG", alt: "Memory 1" },
@@ -15,12 +16,14 @@ const timelineData = [
   { time: "1934", imgSrc: "dummy-img/SF2.JPG", alt: "Memory 10" },
 ];
 
-function CLapp() {
+function App() {
   return (
     <div>
-      <Navbar />
+      <BrowserRouter>
+        <Navbar />
+      </BrowserRouter>
     </div>
   );
 }
 
-export default CLapp;
+export default App;

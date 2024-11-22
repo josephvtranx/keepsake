@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import CLapp from "./pages/Timeline";
+import CLapp from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
