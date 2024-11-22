@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "./components/Navbar"; // Correct import for Navbar
-import Timeline from "./components/Timeline";
+import Navbar from "../components/Navbar"; // Correct import for Navbar
+import Timeline from "../components/Timeline";
 
 const timelineData = [
   { time: "1934", imgSrc: "dummy-img/soundboard.JPG", alt: "Memory 1" },
