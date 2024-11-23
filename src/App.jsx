@@ -6,11 +6,11 @@ import { Routes, Route } from "react-router-dom";
 
 {/*import from pages*/}
 import Home from './pages/Home';
+import Journal from './pages/Journal';
+import Memories from "./pages/Memories";
+import Contact from './pages/Contact';
 import About from './pages/About';
 import Error from './pages/Error';
-import Contact from './pages/Contact';
-import Memories from "./pages/Memories";
-
 
 function App() {
   return (
