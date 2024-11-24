@@ -11,6 +11,7 @@ import Memories from "./pages/Memories";
 import Contact from './pages/Contact';
 import About from './pages/About';
 import Error from './pages/Error';
+import JournalPage from "./pages/JournalPage";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
           <Route path="/contact" element={<Contact/>} />
           <Route path="/about" element={<About/>} />
           <Route path="*" element={<Error/>} />
+          <Route path="/" element={<Journal />} /> {/* Main journal form */}
+        <Route path="/journal-page" element={<JournalPage />} /> {/* Journal Page */}
         </Routes>
     </div>
   );
