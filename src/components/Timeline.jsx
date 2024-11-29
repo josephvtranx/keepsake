@@ -7,7 +7,7 @@ const Timeline = ({ data }) => {
         {data.map((item, index) => (
           <li key={index}>
             <div>
-              <time>{item.time}</time>
+              <time className="date">{item.time}</time>
               <img src={item.imgSrc} alt={item.alt} />
             </div>
           </li>
