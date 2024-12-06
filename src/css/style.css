@@ -10,12 +10,12 @@
 }
 html, body {
   height: 100%;
-  overflow: hidden; 
+  overflow-y: hidden;
+  overflow-x: scroll; 
 }
 body{
   color:#000000;
   background-color: #e1dbce;
-
   margin: 0;
   padding: 0;
 }
@@ -33,25 +33,41 @@ main {
 .timeline {
   display: flex; /* Enable flexbox for layout control */
   justify-content: flex-start; /* Align content to the start */
-  align-items: center;  /* Align content to the top */
-  white-space: nowrap;
-  overflow-x: auto;
-  height: 90vh;
+  align-items: center; /* Align content vertically */
+  white-space: nowrap; /* Prevent line wrapping */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Hide vertical overflow */
+  height: 90vh; /* Maintain consistent height */
   padding-top: 100px;
   padding-bottom: 100px; /* Adjust space below the navbar/header */
+  scroll-behavior: smooth; /* Smooth scrolling effect */
 }
 
+.timeline {
+  display: flex; /* Align items horizontally */
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center; /* Center items vertically */
+  white-space: nowrap; /* Prevent wrapping */
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Prevent vertical scrolling */
+  height: 90vh; /* Maintain consistent height */
+  width: 100vw; /* Ensure the timeline spans the entire viewport width */
+  padding-top: 100px;
+  padding-bottom: 100px;
+  scroll-behavior: smooth; /* Smooth horizontal scrolling */
+}
 .timeline ol {
-  font-size: 0;
+  display: flex; /* Use flex layout for <ol> */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
   width: fit-content; /* Shrink the width to fit the content */
-  padding: 250px 0;
-  transition: all 1s;
 }
 .timeline ol li {
   position: relative;
-  display: inline-block;
+  display: inline-flex; /* Adjust display to flex for better alignment */
   list-style-type: none;
-  width: 250px;
+  flex-shrink: 0; /* Prevent shrinking of list items */
+  width: 250px; /* Fixed width for timeline markers */
   height: 3px;
   background: #fff;
 }
