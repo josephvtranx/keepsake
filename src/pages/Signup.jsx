@@ -67,7 +67,7 @@ export default function SignUp() {
                         required
                     />
 
-                    <button type="submit" className="btn">Sign Up</button>
+                    <button type="submit" className="btn">Sign Up Here</button>
                 </form>
 
                 <p>Already have an account? <a href="login.html">Login here</a></p>
