@@ -14,7 +14,7 @@ export default function Contact() {
                     </p>
                 </div>
             </div>
-            <Card />
+            <Navbar />
             
             
         </>
