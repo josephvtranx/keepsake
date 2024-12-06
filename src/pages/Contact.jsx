@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import Card from "../components/Card";
 
 export default function Contact() {
     return(
@@ -12,7 +13,9 @@ export default function Contact() {
                     <a href="mailto:keepsake@gmail.com">keepsake@gmail.com</a>
                     </p>
                 </div>
-            </div>`
+            </div>
+            <Card />
+            
             
         </>
     );

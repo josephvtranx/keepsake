@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "../components/Card";
 
 const Timeline = ({ data }) => {
   return (
@@ -6,10 +7,11 @@ const Timeline = ({ data }) => {
       <ol>
         {data.map((item, index) => (
           <li key={index}>
-            <div>
-              <time className="date">{item.time}</time>
-              <img src={item.imgSrc} alt={item.alt} />
-            </div>
+            <Card
+              time={item.time}
+              imgSrc={item.imgSrc}
+              description={item.description}
+            />
           </li>
         ))}
       </ol>

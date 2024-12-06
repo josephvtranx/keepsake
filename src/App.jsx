@@ -1,7 +1,5 @@
 import React from "react";
-
 import Navbar from "./components/Navbar";
-
 import { Routes, Route } from "react-router-dom";
 
 {/*import from pages*/}
@@ -26,7 +24,7 @@ function App() {
           <Route path="/about" element={<About/>} />
           <Route path="*" element={<Error/>} />
           <Route path="/" element={<Journal />} /> {/* Main journal form */}
-        <Route path="/journal-page" element={<JournalPage />} /> {/* Journal Page */}
+          <Route path="/journal-page" element={<JournalPage />} /> {/* Journal Page */}
         </Routes>
     </div>
   );
