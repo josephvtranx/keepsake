@@ -1,41 +1,20 @@
-import React, { useState } from "react";
-import Navbar from "../components/Navbar";
-import './style.css'; // Assuming the same CSS files are used
+import React from "react";
+import { Link } from "react-router-dom"; // Import Link from React Router
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for programmatic navigation
 
 export default function Login() {
-    const [isMenuOpen, setMenuOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setMenuOpen(prevState => !prevState);
-    };
+    const navigate = useNavigate(); // Initialize navigate function
 
     const handleLogin = (e) => {
         e.preventDefault();
         // Handle form submission, such as authentication
-        window.location.href = 'clothesline.html'; // Redirect after successful login
+        navigate('/home2'); // Redirect to Home2 page after successful login
     };
 
     return (
-        <>
-            <Navbar />
-            <header>
-                <div className="navbar">
-                    <div className="dropdown">
-                        <span className="hamburger-menu" onClick={toggleMenu}>
-                            &#9776;
-                        </span>
-                        <div id="dropdown-content" className={`dropdown-content ${isMenuOpen ? 'show' : ''}`}>
-                            <a href="home.html">Home</a>
-                            <a href="journal.html">Today's Journal</a>
-                            <a href="clothesline.html">Memory Timeline</a>
-                            <a href="about.html">About</a>
-                            <a href="contact.html">Contact</a>
-                        </div>
-                    </div>
-                </div>
-            </header>
-
+        <div className="login-screen">
             <div className="login-container">
+                <h1>Login</h1>
                 <form onSubmit={handleLogin}>
                     <label htmlFor="email">Email</label>
                     <input
@@ -60,8 +39,8 @@ export default function Login() {
                     </button>
                 </form>
 
-                <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+                <p>Don't have an account? <Link to="/signup" className="signup-link">Sign up here</Link></p>
             </div>
-        </>
+        </div>
     );
 }

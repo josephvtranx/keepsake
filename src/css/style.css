@@ -671,6 +671,56 @@ h2 {
   color: #575757;
 }
 
+.button-container {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #977e6e;
+}
+
+.btn-login {
+  background-color: #ccb9ac;
+}
+
+.btn-signup {
+  background-color: #ccb9ac;
+}
+
+
+.signup-link {
+  color: inherit; 
+  text-decoration: none; 
+}
+
+.signup-link:hover {
+  color: rgb(28, 28, 135); 
+}
+
+.login-link {
+  color: inherit; 
+  text-decoration: none; 
+}
+
+.login-link:hover {
+  color: rgb(28, 28, 135); 
+}
+
+
+
 
 /* Hamburger Animation */
 .hamburger.active div:nth-child(1) {
