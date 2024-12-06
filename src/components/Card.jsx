@@ -12,11 +12,12 @@ function Card({ time, imgSrc, description }) {
       onClick={() => setIsOpen(!isOpen)}
       className="card"
       style={{
+        
         borderRadius: "1rem",
         boxShadow: "0px 10px 30px rgba(0,0,0,0.5)",
         cursor: "pointer",
         background: "white",
-        padding: "1rem",
+        overflow: "hidden",
       }}
     >
       {/* Title */}
@@ -29,31 +30,20 @@ function Card({ time, imgSrc, description }) {
         src={imgSrc}
         alt={time}
         layout="position"
-        style={{
-          width: "100%",
-          borderRadius: "0.5rem",
-          objectFit: "cover",
-        }}
       />
 
       <AnimatePresence>
         {/* Expanded Content */}
         {isOpen && (
-          <motion.div
+          <motion
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
             exit={{ opacity: 0 }}
             className="expand"
-            style={{
-              marginTop: "1rem",
-              padding: "1rem",
-              background: "rgba(240, 240, 240, 0.9)",
-              borderRadius: "0.5rem",
-            }}
           >
             <p>{description}</p>
-          </motion.div>
+          </motion>
         )}
       </AnimatePresence>
     </motion.div>

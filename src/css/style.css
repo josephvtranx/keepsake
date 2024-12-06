@@ -95,9 +95,10 @@ main {
 }
 /* Styles the odd timeline elements */
 .timeline ol li:nth-child(odd) div {
-    top: -16px;
-    transform: translateY(-100%);
+  top: -16px !important; /* Force top value */
+  transform: translateY(-100%) !important; /* Force translate */
 }
+
 .timeline ol li:nth-child(odd) div::before {
     top: 100%;
     border-width: 8px 8px 0 0;
@@ -204,9 +205,7 @@ padding: 3rem 5rem;
   line-height: 150%;
 }
 
-.expand {
-  width: 35rem;
-}
+
 
 
 
