@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 export default function Journal() {
@@ -12,11 +12,29 @@ export default function Journal() {
 
   const [journalEntry, setJournalEntry] = useState("");
   const [moodRating, setMoodRating] = useState(5);
+  const [selectedImage, setSelectedImage] = useState(null); // State to store selected image
   const navigate = useNavigate();
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setSelectedImage(file); // Store the selected image file in state
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/journal-page", { state: { journalEntry, moodRating } }); 
+
+    // You can include the image in the submission logic
+    const formData = new FormData();
+    formData.append("journalEntry", journalEntry);
+    formData.append("moodRating", moodRating);
+    if (selectedImage) {
+      formData.append("image", selectedImage); // Add image to the submission
+    }
+
+    // Mock navigation with the data
+    navigate("/journal-page", { state: { journalEntry, moodRating, image: selectedImage } });
   };
 
   return (
@@ -37,6 +55,12 @@ export default function Journal() {
                 required
               ></textarea>
             </div>
+
+            <div class="file-upload-container">
+              <label>Add an image (optional):</label>
+              <input type="file" class="file-upload" />
+            </div>
+
 
             <div className="mood-base">
               <div className="mood-heading">How are you feeling today?</div>
