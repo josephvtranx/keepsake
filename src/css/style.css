@@ -735,6 +735,17 @@ h2 {
 }
 
 
+.signup-link {
+  text-decoration: underline; 
+}
+
+.login-link {
+  text-decoration: underline; 
+}
+
+
+
+
 
 
 /* Hamburger Animation */
