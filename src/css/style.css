@@ -10,12 +10,12 @@
 }
 html, body {
   height: 100%;
-  overflow-y: hidden;
-  overflow-x: scroll; 
+  overflow: hidden; 
 }
 body{
   color:#000000;
   background-color: #e1dbce;
+
   margin: 0;
   padding: 0;
 }
@@ -33,41 +33,25 @@ main {
 .timeline {
   display: flex; /* Enable flexbox for layout control */
   justify-content: flex-start; /* Align content to the start */
-  align-items: center; /* Align content vertically */
-  white-space: nowrap; /* Prevent line wrapping */
-  overflow-x: auto; /* Enable horizontal scrolling */
-  overflow-y: hidden; /* Hide vertical overflow */
-  height: 90vh; /* Maintain consistent height */
+  align-items: center;  /* Align content to the top */
+  white-space: nowrap;
+  overflow-x: auto;
+  height: 90vh;
   padding-top: 100px;
   padding-bottom: 100px; /* Adjust space below the navbar/header */
-  scroll-behavior: smooth; /* Smooth scrolling effect */
 }
 
-.timeline {
-  display: flex; /* Align items horizontally */
-  justify-content: flex-start; /* Align items to the left */
-  align-items: center; /* Center items vertically */
-  white-space: nowrap; /* Prevent wrapping */
-  overflow-x: scroll; /* Enable horizontal scrolling */
-  overflow-y: hidden; /* Prevent vertical scrolling */
-  height: 90vh; /* Maintain consistent height */
-  width: 100vw; /* Ensure the timeline spans the entire viewport width */
-  padding-top: 100px;
-  padding-bottom: 100px;
-  scroll-behavior: smooth; /* Smooth horizontal scrolling */
-}
 .timeline ol {
-  display: flex; /* Use flex layout for <ol> */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
+  font-size: 0;
   width: fit-content; /* Shrink the width to fit the content */
+  padding: 250px 0;
+  transition: all 1s;
 }
 .timeline ol li {
   position: relative;
-  display: inline-flex; /* Adjust display to flex for better alignment */
+  display: inline-block;
   list-style-type: none;
-  flex-shrink: 0; /* Prevent shrinking of list items */
-  width: 250px; /* Fixed width for timeline markers */
+  width: 250px;
   height: 3px;
   background: #fff;
 }
@@ -111,10 +95,9 @@ main {
 }
 /* Styles the odd timeline elements */
 .timeline ol li:nth-child(odd) div {
-  top: -16px !important; /* Force top value */
-  transform: translateY(-100%) !important; /* Force translate */
+    top: -16px;
+    transform: translateY(-100%);
 }
-
 .timeline ol li:nth-child(odd) div::before {
     top: 100%;
     border-width: 8px 8px 0 0;
@@ -138,7 +121,6 @@ main {
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
 }
-
 
 /* Small screens */
 @media only screen and (max-width: 600px) {
@@ -221,7 +203,9 @@ padding: 3rem 5rem;
   line-height: 150%;
 }
 
-
+.expand {
+  width: 35rem;
+}
 
 
 
@@ -385,7 +369,7 @@ padding: 3rem 5rem;
 .journal-base,
 .mood-base {
   width: 95%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   background-color: #ccb9ac;
   border-radius: 15px;
   padding: 20px;
@@ -399,7 +383,7 @@ padding: 3rem 5rem;
 }
 
 .mood-base {
-  height: 250px;
+  height: 315px;
   margin-top: 20px;
 }
 
@@ -425,7 +409,7 @@ padding: 3rem 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 75px;
+  margin-top: 115px;
 }
 
 .slider {
@@ -743,42 +727,6 @@ h2 {
   text-decoration: underline; 
 }
 
-.home2 {
-  .center-header {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.home-heading {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.button-container {
-    margin-top: 20px;
-}
-
-.navigate-button {
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    border: 1px solid black;
-    background-color: #d5cabd;
-    color: #333;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-}
-
-.navigate-button:hover {
-    transform: scale(1.05);
-}
-}
-
-
-
 
 
 
@@ -878,21 +826,3 @@ h2 {
   border-bottom: 1px solid #ddd;
   font-family: 'Arial', sans-serif;
 }
-
-.file-upload-container {
-  display: flex;
-  align-items: center; 
-  justify-content: center; 
-  gap: 5px; 
-  width: fit-content; 
-  margin: 0 auto; 
-  position: relative; 
-}
-
-.parent-container {
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  height: 100%; 
-}
-
