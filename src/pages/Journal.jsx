@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import { ref, push } from "firebase/database"; // Import Firebase Database functions
+import { db } from "../firebase"; // Import the initialized Realtime Database instance
 
 export default function Journal() {
   const today = new Date();
@@ -22,19 +24,43 @@ export default function Journal() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // You can include the image in the submission logic
-    const formData = new FormData();
-    formData.append("journalEntry", journalEntry);
-    formData.append("moodRating", moodRating);
-    if (selectedImage) {
-      formData.append("image", selectedImage); // Add image to the submission
-    }
+    // Prepare the data to be written to Firebase
+    const journalData = {
+      date: formattedDate, // Current date
+      entry: journalEntry, // User's journal text
+      mood: moodRating, // Mood rating slider value
+      image: selectedImage ? selectedImage.name : null, // Save image name (for now)
+    };
 
-    // Mock navigation with the data
-    navigate("/journal-page", { state: { journalEntry, moodRating, image: selectedImage } });
+    try {
+      // Push data to the "journalEntries" node in Realtime Database
+      await push(ref(db, "journalEntries"), journalData);
+
+      // Show a success message
+      alert("Journal entry added successfully!");
+
+      // Navigate to another page and pass the data via state
+      navigate("/journal-page", {
+        state: {
+          journalEntry: journalEntry,
+          moodRating: moodRating,
+          image: selectedImage,
+          formattedDate: formattedDate,
+        },
+      });
+
+      // Reset form values
+      setJournalEntry("");
+      setMoodRating(5);
+      setSelectedImage(null);
+    } catch (error) {
+      // Handle errors
+      console.error("Error writing journal entry:", error);
+      alert("Error adding journal entry. Please try again.");
+    }
   };
 
   return (
@@ -56,11 +82,14 @@ export default function Journal() {
               ></textarea>
             </div>
 
-            <div class="file-upload-container">
+            <div className="file-upload-container">
               <label>Add an image (optional):</label>
-              <input type="file" class="file-upload" />
+              <input
+                type="file"
+                className="file-upload"
+                onChange={handleImageChange} // Handle image upload
+              />
             </div>
-
 
             <div className="mood-base">
               <div className="mood-heading">How are you feeling today?</div>
