@@ -36,15 +36,19 @@ export default function JournalPage() {
     <>
       <Navbar />
       <main
-        style={{
-          padding: "20px",
-          fontFamily: "Arial, sans-serif",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "20px",
-        }}
-      >
+  style={{
+    padding: "20px",
+    fontFamily: "Arial, sans-serif",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    gap: "20px",
+    minHeight: "200vh", // Ensure the content stretches to full height
+    overflowY: "auto",  // Allow scrolling if content exceeds height
+    boxSizing: "border-box",
+  }}
+>
+      
         <div style={{ textAlign: "center", marginBottom: "10px" }}>
           <h1 style={{ fontSize: "2.5rem", margin: "0" }}>Your Keepsake</h1>
           <p style={{ fontSize: "1.2rem", color: "#555", margin: "10px 0" }}>
