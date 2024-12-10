@@ -407,12 +407,13 @@ main {
 .journal-heading {
   font-family: 'Raleway', sans-serif;
   color: #575757;
-  position: relative; /* Changed from fixed to relative to avoid overlap */
-  margin-top: 20px;
-  margin-bottom: 20px;
+  position: relative; /* Ensure it respects normal flow */
+  margin-top: -100px; /* Reduce top margin */
+  margin-bottom: 5px; /* Keep consistent spacing below */
   text-align: center;
   font-size: 2rem;
 }
+
 
 /* Journal Entry */
 .journal-entry {
