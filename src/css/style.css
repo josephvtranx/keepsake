@@ -95,8 +95,8 @@ main {
 }
 /* Styles the odd timeline elements */
 .timeline ol li:nth-child(odd) div {
-    top: -16px;
-    transform: translateY(-100%);
+  top: -16px !important; /* Force top value */
+  transform: translateY(-100%) !important; /* Force translate */
 }
 .timeline ol li:nth-child(odd) div::before {
     top: 100%;
@@ -194,33 +194,17 @@ main {
 /* card settings */
 
 .card {
-  position: relative; /* Needed for .card-caption absolute positioning */
-  overflow: hidden; /* Prevent caption overflow from affecting layout */
-  height: auto; /* Preserve card height */
-  transition: transform var(--transition-speed); /* Smooth animations */
-}
-.card {
-  width: 250px; /* Define a consistent width */
-  height: 375px; /* Define a consistent height */
-}
+  background: wheat;
+  padding: 3rem 5rem;
+  }
+  .card p {
+    padding-top: 1rem;
+    line-height: 150%;
+  }
 
-.card-caption {
-  position: absolute; /* Prevent it from pushing layout elements */
-  bottom: 0; /* Start at the bottom */
-  left: 0; /* Align to the left */
-  width: 100%; /* Full width of the card */
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  color: white;
-  padding: 1rem;
-  transform: translateY(100%); /* Hidden initially */
-  transition: transform var(--transition-speed); /* Smooth in/out animation */
-}
-
-.card.active .card-caption {
-  transform: translateY(0); /* Slide caption up when active */
-}
-
-
+  .expand {
+    width: 35rem;
+  }
 
 
 .about-box {
