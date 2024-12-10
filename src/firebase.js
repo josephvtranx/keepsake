@@ -27,5 +27,3 @@ export const db = getDatabase(app); // Realtime Database instance
 export const storage = getStorage(app); // Firebase Storage instance
 
 export const auth = getAuth(app);
-
-

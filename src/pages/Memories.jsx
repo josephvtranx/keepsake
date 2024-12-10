@@ -38,6 +38,7 @@ export default function Memories() {
       <Navbar />
       <main>
         <h1>Memory Timeline</h1>
+        <h2>*use arrow keys to navigate</h2>
         {loading ? (
           <p>Loading memories...</p>
         ) : timelineData.length > 0 ? (
