@@ -12,6 +12,7 @@ export default function Home() {
                 <h1 className="home-heading">Keepsake</h1>
                 <h2>Where Memories Become Reality</h2>
                 <div className="button-container">
+                    <button className="btn btn-journal" onClick={() => navigate("/Journal")}>Journal Your Day!</button>
                 </div>
             </div>
         </>
