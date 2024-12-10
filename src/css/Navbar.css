@@ -125,6 +125,11 @@
   }
 }
 
+body {
+  padding-bottom: 5.5rem; 
+}
+
+
 
 .dropdown-content a {
   color: black;
