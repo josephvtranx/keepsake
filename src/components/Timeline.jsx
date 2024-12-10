@@ -2,18 +2,21 @@ import React from "react";
 import Card from "../components/Card";
 
 const Timeline = ({ data }) => {
+  
+  const listItems = data.map((item, index) => (
+    <li key={index}>
+      <Card
+        time={item.time}
+        imgSrc={item.imgSrc}
+        description={item.description}
+      />
+    </li>
+  ));
+
   return (
     <section className="timeline">
       <ol>
-        {data.map((item, index) => (
-          <li key={index}>
-            <Card
-              time={item.time}
-              imgSrc={item.imgSrc}
-              description={item.description}
-            />
-          </li>
-        ))}
+        {listItems}
       </ol>
     </section>
   );
