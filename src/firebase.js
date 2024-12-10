@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getDatabase } from "firebase/database"; // Import for Realtime Database
 import { getStorage } from "firebase/storage"; // Import for Firebase Storage
+import { getAuth } from "firebase/auth";
 
 
 // Your web app's Firebase configuration
@@ -24,5 +25,7 @@ const analytics = getAnalytics(app);
 // Initialize Realtime Database and Firebase Storage
 export const db = getDatabase(app); // Realtime Database instance
 export const storage = getStorage(app); // Firebase Storage instance
+
+export const auth = getAuth(app);
 
 
