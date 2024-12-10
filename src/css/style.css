@@ -397,19 +397,32 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  padding: 20px;
+  gap: 20px; /* Add gap to separate sections */
+  padding: 100px 20px 20px; /* Adjust padding to account for heading height */
   box-sizing: border-box;
   overflow-y: auto; /* Enable scrolling if content exceeds viewport height */
 }
 
-/* Other styles remain the same */
-
-.mood-base {
-  height: 315px;
+/* Journal Heading */
+.journal-heading {
+  font-family: 'Raleway', sans-serif;
+  color: #575757;
+  position: relative; /* Changed from fixed to relative to avoid overlap */
   margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2rem;
 }
 
+/* Journal Entry */
+.journal-entry {
+  margin-top: 0; /* Removed additional top margin */
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Inner Box Journal */
 .inner-box-journal {
   width: 95.8%;
   height: 100%;
@@ -428,11 +441,12 @@ main {
   outline: none;
 }
 
+/* Slider Container */
 .slider-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 115px;
+  margin-top: 50px; /* Reduced margin to avoid excessive spacing */
 }
 
 .slider {
@@ -445,23 +459,50 @@ main {
   outline: none;
 }
 
-.journal-heading {
-    font-family: 'Raleway', sans-serif;
-    color: #575757;
-    position: fixed;
-    top: 0;
-    margin-top: 5rem;
+.mood-base {
+  height: 200px; /* Keep the shorter height */
+  margin-top: 20px;
+  background-color: #ccb9ac;
+  border-radius: 15px;
+  padding: 15px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  justify-content: space-between; /* Spread elements evenly */
 }
 
-.journal-entry {
-  margin-top: 4rem;
-  position: fixed;
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px; /* Bring slider lower in the box */
 }
 
-.journal-heading, .journal-entry {
+.slider {
+  width: 80%;
+  height: 20px; /* Maintain slider height */
+  background: linear-gradient(to right, rgb(252, 110, 110), rgb(251, 251, 120), rgb(121, 255, 121)); 
+  border-radius: 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+.submit {
+  margin-top: 20px; /* Space above the button */
+  padding: 5px 15px; /* Adjust padding for less width */
+  font-size: 16px;
+  width: auto; /* Set width based on content */
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #977e6e;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
-
 
 .slider::-webkit-slider-thumb,
 .slider::-moz-range-thumb {
