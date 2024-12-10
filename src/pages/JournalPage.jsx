@@ -43,7 +43,7 @@ export default function JournalPage() {
           flexDirection: "column",
           alignItems: "center",
           gap: "20px",
-          minHeight: "150vh", // Use full viewport height
+          minHeight: "170vh", // Use full viewport height
           boxSizing: "border-box",
         }}
       >
