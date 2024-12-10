@@ -10,12 +10,12 @@ import { getAuth } from "firebase/auth";
 const firebaseConfig = {
   apiKey: "AIzaSyCf7vOIx3gSTy_RRXErQ-m8WI3yMwncECA",
   authDomain: "keepsake-a44a0.firebaseapp.com",
-  databaseURL: "https://keepsake-a44a0-default-rtdb.firebaseio.com", // Add your Realtime Database URL
+  databaseURL: "https://keepsake-a44a0-default-rtdb.firebaseio.com",
   projectId: "keepsake-a44a0",
-  storageBucket: "keepsake-a44a0.appspot.com", // Firebase Storage bucket
+  storageBucket: "keepsake-a44a0.firebasestorage.app",
   messagingSenderId: "266536330551",
   appId: "1:266536330551:web:44595e1380803aab5ea6b2",
-  measurementId: "G-LDS4X4VJDQ",
+  measurementId: "G-LDS4X4VJDQ"
 };
 
 // Initialize Firebase

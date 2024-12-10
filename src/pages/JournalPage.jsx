@@ -127,7 +127,7 @@ export default function JournalPage() {
               Your Keepsake Image
             </h3>
             <img
-              src={URL.createObjectURL(image)}
+              src={image} // Use the Firebase Storage URL directly
               alt="Uploaded Memory"
               style={{ maxWidth: "100%", borderRadius: "10px" }}
             />
