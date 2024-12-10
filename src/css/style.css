@@ -194,18 +194,32 @@ main {
 /* card settings */
 
 .card {
-background: wheat;
-padding: 3rem 5rem;
+  position: relative; /* Needed for .card-caption absolute positioning */
+  overflow: hidden; /* Prevent caption overflow from affecting layout */
+  height: auto; /* Preserve card height */
+  transition: transform var(--transition-speed); /* Smooth animations */
+}
+.card {
+  width: 250px; /* Define a consistent width */
+  height: 375px; /* Define a consistent height */
+}
 
-}
-.card p {
-  padding-top: 1rem;
-  line-height: 150%;
+.card-caption {
+  position: absolute; /* Prevent it from pushing layout elements */
+  bottom: 0; /* Start at the bottom */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width of the card */
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  padding: 1rem;
+  transform: translateY(100%); /* Hidden initially */
+  transition: transform var(--transition-speed); /* Smooth in/out animation */
 }
 
-.expand {
-  width: 35rem;
+.card.active .card-caption {
+  transform: translateY(0); /* Slide caption up when active */
 }
+
 
 
 
