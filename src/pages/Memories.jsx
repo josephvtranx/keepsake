@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Timeline from "../components/Timeline";
+import { db } from "../firebase"; 
 
 export default function Memories() {
     {/*example data for timeline*/}
@@ -91,6 +92,7 @@ export default function Memories() {
         <h1>Memory Timeline</h1>
         <Timeline data={timelineData} />
       </main>
+      
     </>
   );
 }
