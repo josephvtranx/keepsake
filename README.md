@@ -11,7 +11,6 @@ Keepsake is a **modern online journaling platform** that helps users capture and
 - **Authentication** – Secure signup/login via Firebase Auth for personalized access.  
 - **Dynamic Timeline** – Scrollable timeline to view past entries, organized chronologically.  
 - **Multimedia Support** – Upload and display images alongside text entries.  
-- **Cross-Device Access** – Fully responsive design for desktop, tablet, and mobile.  
 
 ---
 
